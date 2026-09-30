@@ -69,9 +69,8 @@ jobs:
       - name: Build debug APK
         shell: bash
         run: |
-          set -e
           cd "$PROJECT_DIR"
-          gradle :app:assembleDebug --no-daemon --stacktrace
+          gradle :app:assembleDebug --no-daemon --stacktrace --info
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
